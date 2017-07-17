@@ -7,7 +7,7 @@ shorterdelay = 0.1
 current = window.get_active_title()
 
 if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
-    window.activate("Stata")
+    window.activate("Stata/")
 
     cmd = clipboard.get_selection()
 
