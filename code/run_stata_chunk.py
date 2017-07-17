@@ -18,7 +18,7 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
         # If //, delete spaces and text up to but not including the \n
         # If /*, delete everthing until */
 
-        cmd = re.sub(r"\s*(///)\s*\n\s*", " ", cmd)
+        cmd = re.sub(r"\s*(///).*\n\s*", " ", cmd)
         cmd = re.sub(r"\s*//.*\n", " \n", cmd)
         cmd = re.sub(r"/\*.*\*/", " ", cmd)
         cmd = re.sub(r"[\t ]+", " ", cmd)
@@ -33,6 +33,3 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
 
 else:
     keyboard.send_keys("<ctrl>+r")
-
-
-
