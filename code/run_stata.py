@@ -29,7 +29,7 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
         cmd = re.sub(r"[\t ]+", " ", cmd)
         time.sleep(shortdelay)
 
-    if re.search(r"/\*.*\*/", cmd):
+    if re.search(r"/\*.*?\*/", cmd):
         cmd = re.sub(r"/\*.*\*/", " ", cmd)
         cmd = re.sub(r"[\t ]+", " ", cmd)
         time.sleep(shortdelay)
@@ -50,6 +50,3 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
 
 else:
     keyboard.send_keys("<ctrl>+r")
-
-# with open("/home/kyle/Desktop/Output.txt", "w") as text_file:
-#     print(cmd, file=text_file)
