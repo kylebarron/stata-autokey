@@ -4,7 +4,7 @@ shortdelay = 0.05
 
 current = window.get_active_title()
 
-if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
+if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.(a)?do", current):
     keyboard.send_keys("<ctrl>+l")
     window.activate("Stata/")
 
@@ -49,4 +49,4 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
     keyboard.send_keys("<up>")
 
 else:
-    keyboard.send_keys("<ctrl>+r")
+    keyboard.send_keys("<ctrl>+<shift>+r")

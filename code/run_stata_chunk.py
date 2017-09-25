@@ -5,7 +5,7 @@ shortdelay = 0.2
 
 current = window.get_active_title()
 
-if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.do", current):
+if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.(a)?do", current):
     window.activate("Stata/")
     if window.wait_for_focus("Stata/(IC|SE|MP) 1[1-5].[0-2]", timeOut = 1):
     
