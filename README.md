@@ -34,6 +34,21 @@ cp stata-autokey/code/.run_stata.chunk.json "~/.config/autokey/data/My Phrases/"
 rm -rf stata-autokey
 ``` 
 
+### Using
+
+By default, this code is set up to run from the Atom text editor in a graphical Stata window. With these files installed, you should be able to open a .do file in Atom, have a Stata window open somewhere, and press `ctrl-r` to send a selection to Stata.
+
+Soon, I hope to make it clearer how to adjust the scripts to run from Sublime or Visual Studio. Add a bug report if you're interested in using these from a different editor and I haven't updated this.
+
+
+### Limitations
+
+- If there are two Stata windows open at the same time, this doesn't always know what to do. For me it usually pastes and runs code in the first window I opened, but not always.
+- There seems to be a bug when running ~ 80-100 lines of code. I use it mostly for smaller code chunks.
+- This uses the "name" doesn't work with a console version of stata (if you're using a text editor like atom, just use a terminal inside the program if you want the console version).
+
+
+
 ## Author
 
 * [**Kyle Barron**](https://github.com/kylebarron)
