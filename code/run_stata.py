@@ -17,14 +17,14 @@ if re.search(r"Atom", current) and re.search(r"^[\w\-\. ]+\.(a)?do", current):
     # If ///, paste but do not run everything before ///
     # If //, paste everything before // and then also run
     # If /*, delete everthing until */ and then also run
-        # It's hard to deal with multi-line comments when running line-by-line
+    # It's hard to deal with multi-line comments when running line-by-line
 
     if re.search(r"///", cmd):
         cmd = re.sub(r"\s*(///).*\n\s*", " ", cmd)
         cmd = re.sub(r"[\t ]+", " ", cmd)
         time.sleep(shortdelay)
 
-    if re.search(r"//",  cmd):
+    if re.search(r"//", cmd):
         cmd = re.sub(r"\s*//.*\n", " \n", cmd)
         cmd = re.sub(r"[\t ]+", " ", cmd)
         time.sleep(shortdelay)
